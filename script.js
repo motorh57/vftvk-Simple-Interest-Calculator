@@ -1,3 +1,19 @@
+        //Funtions to show the amount of the selection at displacement bar
+function updateRate()
+{
+    var rateval = document.getElementById("rate").value; 
+    document.getElementById("rate_val").innerText=rateval;
+}
+
+function bigerThan ()
+{
+	var invAmount=document.getElementById("principal");
+	if(invAmount.value<"1"){
+		alert("!Error! Enter a Positive Number");
+		invAmount.focus();
+		return false;
+	}
+}
 
 function compute()
 {
@@ -14,28 +30,4 @@ function compute()
     + rate+" </mark> %,</br> You Will recibe an amount of : <mark> " +interest+ 
     " </mark> ,</br> in the year: <mark> "+year;" </mark> <br>";
     
-}
-        //Funtions to show the amount of the selection at displacement bar
-function updateRate()
-{
-    var rateval = document.getElementById("rate").value; 
-    document.getElementById("rate_val").innerText=rateval;
-}
-function checkvalues ()
-{
-    var investment=document.getElementById("principal");
-    if (investment.value==""){
-        alert("the field Amount Can not be empty");
- 		investment.focus();
-        return false;
-    }
-} 
-function bigerThan ()
-{
-	var invAmount=document.getElementById("principal");
-	if(invAmount.value<"1"){
-		alert("!Error! Enter a Positive Number");
-		invAmount.focus();
-		return false;
-	}
 }
